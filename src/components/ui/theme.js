@@ -1,9 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 
-
-const arcBlue = "#0b2146"
 const arcOrange = "#f48522"
+const arcBlue = "#0b2146"
 const white = "#fff"
 
 
@@ -27,11 +26,18 @@ const Theme = createMuiTheme({
     }
   },
   typography: {
+    body: {
+      fontFamily: "DM Sans, sans-serif",
+      fontSize: "16px",
+      lineHeight: "20px",
+      color: `${arcBlue}`,
+    },
       tab: {
-        fontFamily: "Raleway",
+        fontFamily: "DM Sans, sans-serif",
         textTransform: "none",
-        fontWeight: "700",
-        fontSize: "1rem",
+        fontWeight: "600",
+        fontSize: "14px",
+       
       },
       estimate: {
         fontFamily: "Pacifico",

@@ -97,6 +97,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     fontSize: "12px",
     lineHeight: "17px",
+    [theme.breakpoints.down("xs")]: {
+      lineHeight:  "9px"
+    },
     fontWeight: "600",
     letterSpacing: "1px",
     textTransform: "upppercase",
@@ -123,6 +126,17 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "transparent"
     }
   }, 
+  navRightbtn: {
+    position:"absolute",
+    left: "38rem",
+    [theme.breakpoints.down("md")]: {
+      left: "50rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+        left:  "10rem"
+    }
+
+  }, 
   drawerIcon: {
     width: "50px", 
     height: "50px"
@@ -143,7 +157,7 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     
     backgroundColor: theme.palette.common.white,
-    zIndex: theme.zIndex.modal + 1 ,
+    zIndex:  1000,
     boxShadow: "14px 14px 40px 0 rgb(118 126 173 / 8%)"
   },
   toolbar: {
@@ -154,7 +168,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom:"15px",
     height: "100%",
     width: "100%",
-    maxWidth: "1140px",
+    maxWidth: "1150px",
     // justifyContent: "center",
     // alignItems: "center",
   }, 
@@ -170,6 +184,14 @@ const useStyles = makeStyles((theme) => ({
    fontSize: "14px",
    fontWeight: "700",
    textDecoration: "none"
+  },
+  customTabRoot: {
+    color: theme.palette.secondary,
+   
+    
+},
+  customTabIndicator: {
+    display: "none",
   }
 }));
 
@@ -284,9 +306,13 @@ const Header = () => {
   const tabs = (
     <React.Fragment>
                   <Tabs
-              value={Value}
-              className={classes.tabsContainer}
-              onChange={handleChange}
+               value={Value}
+               className={classes.tabsContainer}
+               onChange={handleChange}
+               classes={{
+                root: classes.customTabRoot,
+                indicator: classes.customTabIndicator
+            }}
             >
               <Tab
                 className={classes.tab}
@@ -372,6 +398,7 @@ const Header = () => {
                     open={openDrawer} onClose={()=> setOpenDrawer(false)} 
                     onOpen={() => setOpenDrawer(true)} 
                     classes={{paper: classes.drawer}}
+                    anchor="top"
         >
             <div className={classes.toolbarMargin} />
                         <List disablePadding>
@@ -379,19 +406,19 @@ const Header = () => {
                                   onClick={()=> {setOpenDrawer(false); setValue(0)}}
                                   selected={Value === 0 }
                         >
-                              <ListItemText className={Value === 0 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem} disableTypography>Home</ListItemText>
+                              <ListItemText className={Value === 0 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem} disableTypography>Features</ListItemText>
                         </ListItem>
                         <ListItem divider component={Link} to="/revolution" 
                                 onClick={()=> {setOpenDrawer(false); setValue(1)}}
                                 selected={Value === 1 }
                           >
-                              <ListItemText className={Value === 1 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem} divider disableTypography>The revolution</ListItemText>
+                              <ListItemText className={Value === 1 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem} divider disableTypography>Pricing</ListItemText>
                             </ListItem>
                             <ListItem divider component={Link} to="/about" 
                                       onClick={()=> {setOpenDrawer(false); setValue(2)}}
                                       selected={Value === 2} 
                             >
-                              <ListItemText className={Value === 2 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem} disableTypography>About Us</ListItemText>
+                              <ListItemText className={Value === 2 ? [classes.drawerItemSelected, classes.drawerItem] : classes.drawerItem} disableTypography>Solutions</ListItemText>
                             </ListItem>
                             <ListItem divider component={Link} to="/services"
                                      onClick={()=> {setOpenDrawer(false); setValue(3)}}
@@ -415,6 +442,21 @@ const Header = () => {
                             </ListItem>   
                         </List>
                     </SwipeableDrawer>
+                    <div className={classes.navRightbtn}>
+              
+                      <a href="#" className={classes.headersignin} >Sign in</a>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        className={classes.button}
+                        component={Link}
+                        to="/estimate"
+                        onClick={() => setValue(5)}
+                      >
+                        START NOW
+                      </Button>
+                    
+                      </div>
                     <IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
                       <MenuIcon className={classes.drawerIcon}/>
                     </IconButton>

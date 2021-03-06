@@ -4,6 +4,7 @@ import {ThemeProvider } from '@material-ui/core/styles';
 
 import Theme from './ui/theme';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Home from './pages/Home'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <BrowserRouter>
             <Header />
         <Switch>
-          <Route exact path="/" component={()=> <div>Home</div>} />
+          <Route exact path="/" component={Home} />
           <Route  path="/about" component={()=> <div>about us</div>} />
           <Route path="/services" component={()=> <div>Serivces</div>} />
           <Route  path="/revolution" component={()=> <div>The Revolution</div>} />
