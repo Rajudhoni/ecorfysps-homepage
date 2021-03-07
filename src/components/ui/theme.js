@@ -40,7 +40,7 @@ const Theme = createMuiTheme({
        
       },
       estimate: {
-        fontFamily: "Pacifico",
+        fontFamily: "DM Sans, sans-serif",
         fontSize: "1rem",
         textTransform: "none",
         color: "white"
