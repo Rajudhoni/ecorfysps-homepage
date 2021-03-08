@@ -133,13 +133,13 @@ const useStyles = makeStyles((theme) => ({
       left: "50rem",
     },
     [theme.breakpoints.down("xs")]: {
-        left:  "10rem"
+        left:  "15rem"
     }
 
   }, 
   drawerIcon: {
-    width: "50px", 
-    height: "50px"
+    width: "40px", 
+    height: "40px"
   }, 
   drawer: {
     backgroundColor: theme.palette.common.arcBlue,
@@ -151,7 +151,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white"
   },
   drawerItemEstimate: {
-    backgroundColor: theme.palette.common.arcOrange
+    backgroundColor: theme.palette.common.arcOrange,
+    borderRadius: "50px",
+    textAlign:"center"
   }, 
   drawerItemSelected: {
     opacity: 1
@@ -202,7 +204,7 @@ const Header = () => {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
@@ -447,7 +449,7 @@ const Header = () => {
                     <div className={classes.navRightbtn}>
               
                       <a href="#" className={classes.headersignin} >Sign in</a>
-                      <Button
+                      {/* <Button
                         variant="contained"
                         color="primary"
                         className={classes.button}
@@ -457,7 +459,7 @@ const Header = () => {
                       >
                         START NOW
                       </Button>
-                    
+                     */}
                       </div>
                     <IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
                       <MenuIcon className={classes.drawerIcon}/>
