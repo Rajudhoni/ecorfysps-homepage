@@ -140,21 +140,26 @@ const useStyles = makeStyles((theme)=>({
     //     marginLeft: "10px",
         
     // },
-   
+
   
     ['@media (max-width:375px)']:{
         marginLeft: "20px"
     },
-    ['@media (min-width:425px)']:{
+    ['@media (max-width:425px)']:{
         marginLeft: "60px"
     },
-    ['@media (min-width:768px)']:{
-        marginLeft: 0,
-    },
-    ['@media (max-width:1024px)']:{
-        marginLeft: 0,
+    ['@media (max-width:320px)']:{
+   
+        marginLeft:"24px"
+  
+      },
+    // ['@media (min-width:768px)']:{
+    //     marginLeft: 0,
+    // },
+    // ['@media (max-width:1024px)']:{
+    //     marginLeft: 0,
        
-    },
+    // },
 
 
     minHeight: "45px",
@@ -182,47 +187,7 @@ const useStyles = makeStyles((theme)=>({
 
     transition: "all 350ms ease",
     },  
-    // lndButton: {
-    //     ...theme.typography.estimate,
-    // borderRadius: "50px",
-    // marginRight: 0,
-    // marginLeft: 0,
-    // [theme.breakpoints.down("xs")]:{
-    //     marginLeft: "10px",
-        
-    // },
-    // ['@media (min-width:375px)']:{
-    //     marginLeft: "0px"
-    // },
-    // ['@media (min-width:425px)']:{
-    //     marginLeft: "60px"
-    // },
-    // minHeight: "45px",
-    // minWidth: "140px",
-    // marginTop: 0,
-    // paddingTop: "16px",
-    // paddingRight: "40px",
-    // paddingBottom: "16px",
-    // paddingLeft: "40px",
-    // flexDirection: "row",
-    // justifyContent:"center",
-    // alignItems: 'center',
-    // alignSelf: "center",
-
-    // lineHeight: "12px",
-    // [theme.breakpoints.down("md")]: {
-    //     lineHeight:  "10px"
-    //   },
-    // fontSize: "12px",
-    // fontWeight: "600",
-    // letterSpacing: "1px",
-    // textTransform: "upppercase",
-    // cursor: "pointer",
-    // boxShadow: 'none',
-
-    // transition: "all 350ms ease",
-    // }, 
-    // 
+    
     noCard: {
        
         marginTop: "5px",
