@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+
 import clsx from  'clsx';
 import Button from "@material-ui/core/Button";
 import introimg from '../images/headerimg.png';
@@ -9,7 +11,8 @@ import introimg from '../images/headerimg.png';
 
 const useStyles = makeStyles((theme)=>({
     margin: {margin: theme.spacing(2)},
-    bodyContainer: {
+    root: {
+        flexGrow: 1,
         display: "block",
         paddingTop: "40px",
         alignSelf: "center",
@@ -299,12 +302,105 @@ const useStyles = makeStyles((theme)=>({
         color: theme.palette.common.arcBlue,
         marginTop: "10px",
         marginBottom: "16px",
+        display: "block",
         
     }, 
     textspan3: {
-        color: theme.palette.common.arcOrange
-    }
+        color: theme.palette.common.arcOrange,
+       
+    }, 
+    mainreplaces: {
+        ...theme.typography.body,
+        minHeight: "10px",
+        color: "#0a1f44",
+        lineHeight: "10px",
+        
+    }, 
+    alternatecomp: {
+        maxWidth: "100%"
+    },
+    mainreplacelogo:{
+        maxHeight: "25px",
+        maxWidth: "100px",
+        marginRight: "15px",
+        paddingTop: "0",
+        ...theme.img,
+    }, 
+    featurecolumn: {
+        width: "85%",
+        height: "100%",
+        
+       
+        
+    }, 
+    ch4: {
+        ...theme.typography.body,
+        marginTop: "5px",
+        marginBottom: '10px',
+        fontSize: "18px",
+        lineHeight: "25px",
+        fontWeight: 700
+    },
+    cparagraph:{
+        ...theme.typography.body,
+         display: "block",
+        maxWidth: "380px",
+        marginRight: "auto",
+        marginBottom: "15px",
+        [theme.breakpoints.down("md")]:{
+            marginRight: 0,
+            marginLeft: 0,
+        },
+        marginLeft: "auto",
+        color: "#0a1f44",
+        lineHeight: "28px",
+        textAlign: "left",
+        fontSize: "19px",
+        marginTop: 0,
+    }, 
+    lndimg: {
+        ...theme.img,
+        display: "block",
+        width: "auto",
+        maxHeight: "400px",
+        maxWidth: "100%"
+    }, 
 
+    sec4blockcontent: {
+        width: "50%",
+        minHeight: "200px",
+        paddingLeft: "15px",
+    }, 
+
+    sec4mainh2: {
+       fontSize: "36px",
+       color: '#0a1f44',
+       marginTop: "24px",
+       marginBottom: "16px",
+       lineHeight: "1.2",
+       fontWeight: 700
+    },
+    readmorelink:{
+        marginRight: 0,
+        marginLeft: 0,
+        textDecoration: "none",
+        display: "inline-block"
+
+    },
+    linktext: {
+      
+        color: "#4e5d78",
+        fontSize: "16px",
+        fontWeight: "500",
+        textAlign: "center",
+    },
+    linkarrow: {
+        width: "15px",
+        maxWidth: "100%",
+        verticalAlign: "middle",
+       
+    }
+    
     
 
 
@@ -313,7 +409,8 @@ const useStyles = makeStyles((theme)=>({
 const Home = () => {
     const classes = useStyles();
     return (
-        <div className={classes.bodyContainer}>
+        <div className={classes.root}>
+            <Container fixed>
             <Grid
                 container
                 direction="row"
@@ -472,17 +569,133 @@ const Home = () => {
                     spacing={6}
                     className={classes.sectionthree}
                     >
-                        <Grid xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68b7cb1df9de1fa1500f25_5f3fd5dff97ee921f9ed990c_img_courses(2)%20(1).png" loading="lazy" alt="" className={classes.secthreeimage} />
                         </Grid>
-                        <Grid item xs={6} className={classes.secthreegridtwo}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.secthreegridtwo}>
+                            <Grid item xs={12}>
                         <h2 className={classes.mainh2}>Create <span className={classes.textspan3}>Stunning <br></br>  </span>Online Products</h2>
+                        </Grid> 
+                            <Grid item xs={12}>
+                                <div className={classes.mainreplaces}>
+                                    Replaces: <br></br> &zwj;
+                                </div>
+                            </Grid>
+                            <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
+                                <Grid item >
+                                    <a href="#" className={classes.alternatecomp}>
+                                        <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3bea7efda3cf13c2294155_Teachable-logo-green.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                    </a>
+                                </Grid>
+                                <Grid item  style={{textAlign: "left" }}>
+                                <a href="#" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3be9c87450d7433c943f8b_kajabi-logo-wide.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                </a>
+                                </Grid>
+                                <Grid item style={{textAlign: "left"}}>
+                                <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c0318d4c09faf4bfbac6a_Logo_Grey_Small.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
+                                    </a>
+                                </Grid>
+                            
+                            </Grid>
+                            <Grid item container alignItems="flex-start" style={{marginBottom: "15px", height: "auto"}}>
+                                <Grid item xs={12} className={classes.featurecolumn}>
+                                    <h4 className={classes.ch4}>Products, daily challenges or even trainings<br/></h4>
+                                    
+                                </Grid>
+                                <Grid item xs={12} className={classes.featurecolumn} >
+                                <p className={classes.cparagraph}>Create various kinds of online products that match any type of online business</p>
+                                </Grid>
+                            </Grid>
+                            <Grid item container alignItems="flex-start" style={{marginBottom: "15px", height: "auto"}}>
+                                <Grid item xs={12} className={classes.featurecolumn}>
+                                    <h4 className={classes.ch4}>Quizzes, tests and homework<br/></h4>
+                                    
+                                </Grid>
+                                <Grid item xs={12} className={classes.featurecolumn} >
+                                <p className={classes.cparagraph}>Check the progress of your students by running automated tests or check homework manually</p>
+                                </Grid>
+                            </Grid>
                         </Grid>
+                        
 
                     </Grid>
+                  
 
                     {/* Section 3 */}
+                    <div className={classes.margin}></div>
+                     {/* Section -4 */}
+                     <Grid
+                        container
+                        direction="row"
+                        justify="flex-start"
+                        alignItems="flex-start"
+                        >
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} >
+                                        <Grid
+                                            item
+                                        container
+                                        direction="row"
+                                        justify="flex-start"
+                                        alignItems="center"
+                                        style={{paddingTop: "40px"}}
+                                        >
+                                                            
+                                        
+                                            <h2 class={classes.sec4mainh2}>Beautiful and <span className={classes.textspan3}>Converting<br/>‍</span>Landing Pages<br/></h2>
+                                            
+                                            <Grid item xs={12}>
+                                                <div className={classes.mainreplaces}>
+                                                    Replaces: <br></br> &zwj;
+                                                </div>
+                                            </Grid>
 
+                            <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
+                                <Grid item >
+                                    <a href="#" className={classes.alternatecomp}>
+                                        <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c06c06fb244ee8e45bbdf_webflow.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                    </a>
+                                </Grid>
+                                <Grid item  style={{textAlign: "left" }}>
+                                <a href="#" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c06d6ff3ba5bf60da119a_1200px-Wix.com_website_logo.svg.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                </a>
+                                </Grid>
+                                <Grid item style={{textAlign: "left"}}>
+                                <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c0755bd17cecaa03262f0_instapage-logo-3.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
+                                    </a>
+                                </Grid>
+                            
+                            </Grid>
+                            <Grid item xs={12}>
+                                    <p className={classes.lndParagraph}>Even the best product needs an engaging storefront. Build your responsive, converting landing pages with just a few clicks.</p>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <a href="#" className={classes.readmorelink}>
+                                    <div className={classes.linktext}>
+                                        Read More &nbsp; <img src="https://image.flaticon.com/icons/png/512/25/25426.png" alt="" className={classes.linkarrow} />
+                                    </div>
+                                   
+                                </a>
+                            </Grid>
+                            
+
+                                                            
+                            </Grid>
+                        </Grid>
+
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} style={{padding: "10px"}}>
+                                <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68d862bee2b96b8cf8569e_5eb57d5f8e32f5d9c4da88f6_img_landing%20(1).png" alt="Landing page builder" title="Image of landing page builder" loading="lazy" className={classes.lndimg} />
+                                
+                            </Grid>
+                    
+                    
+                    </Grid>
+
+                     {/* Section -4 */}
+                     </Container>
         </div>
     )
 }
