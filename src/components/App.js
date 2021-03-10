@@ -5,6 +5,7 @@ import {ThemeProvider } from '@material-ui/core/styles';
 import Theme from './ui/theme';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home'
+import Footer from './ui/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route  path="/estimate" component={()=> <div>The Estimate</div>} />
           
         </Switch>
+        <Footer/>
       </BrowserRouter>
     </ThemeProvider>
   );
