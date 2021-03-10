@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
           ].join(','),
     },
     griditemargin: {
-        marginBottom: "10px"
+        marginBottom: "15px"
     },
     linkphone: {
         color: "#000",
@@ -119,7 +119,7 @@ const Footer = () => {
                                 <Grid item container direction="row"
                                         justify="space-around"
                                         alignItems="flex-start">
-                                <Grid item xs={2}>
+                                <Grid item  xs={12} sm={2} md={2} lg={2} xl={2}>
                                 <Grid
                                     item
                                     container
@@ -159,7 +159,7 @@ const Footer = () => {
                                         
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={2}>
+                                <Grid item xs={12} sm={2} md={2} lg={2} xl={2}>
                                 <Grid
                                     item
                                     container
@@ -195,7 +195,7 @@ const Footer = () => {
                                     </Grid>
 
                                 </Grid>
-                                <Grid item xs={2}>
+                                <Grid item xs={12} sm={2} md={2} lg={2} xl={2}>
                                 <Grid
                                     item
                                     container
@@ -235,7 +235,7 @@ const Footer = () => {
                                         
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={2}>
+                                <Grid item xs={12} sm={2} md={2} lg={2} xl={2}>
                                 <Grid
                                     item
                                     container
@@ -279,7 +279,7 @@ const Footer = () => {
                                     </Grid>
 
                                 </Grid>
-                                <Grid item xs={2}>
+                                <Grid item xs={12} sm={2} md={2} lg={2} xl={2}>
                                 <Grid
                                     item
                                     container
@@ -347,7 +347,7 @@ const Footer = () => {
                             <Grid item container direction="row"
                                         justify="space-around"
                                         alignItems="flex-start">
-                                            <Grid item xs={2}>
+                                            <Grid item xs={12} sm={2} md={2} lg={2} xl={2}>
                                                     <div style={{height: "150px", width: "150px"}} >
                                                     <img src="https://www.softwareworld.co/wp-content/uploads/2019/03/LMS-Software.png" className={classes.midimg} />
                                                     </div>

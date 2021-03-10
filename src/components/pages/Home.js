@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme)=>({
         order: 0,
         marginLeft: "auto",
         marginRight: "auto",
-        maxWidth: "1120px",
+        maxWidth: "1150px",
         [theme.breakpoints.down("md")]:{
             paddingTop: "30px",
             maxWidth: "940px",
@@ -400,7 +400,132 @@ const useStyles = makeStyles((theme)=>({
         maxWidth: "100%",
         verticalAlign: "middle",
        
-    }
+    },
+    sec5check: {
+        position: 'static',
+        right: "111px",
+        display: "flex",
+        overflow: "visible",
+        marginBottom: "12px",
+        WebkitBoxOrient: "horizontal",
+        WebKitBoxDirection: "normal",
+        flexDirection:"row",
+        webkitBoxPack: "start",
+        justifyContent: "flex-start",
+        flexWrap: "wrap",
+        WebkitBoxAlign: "center",
+        alignItems: "center",
+        alignContent: "flex-start",
+        gridAutoColumns: "1fr",
+        gridTemplateColumns: "auto auto",
+        textAlign: "justify",
+        objectFit: "fill",
+        objectPosition: "50% 50%",
+
+        
+    },
+    checkIcon: {
+        ...theme.img,
+        width: "20px",
+        marginRight: "12px",
+    },
+    checkText: {
+        overflow: "visible",
+        maxWidth: "560px",
+        marginBottom: 0,
+        // marginLeft: "1px",
+        webkitBoxFlex: 1,
+        flex: 1,
+        color: "#4e5d78",
+        lineHeight: "25px",
+        fontWeight: 500,
+        textAlign: "left",
+        objectFit: "fill",
+        fontSize: "18px",
+        marginTop: 0
+    },
+    appbtnBlock: {
+        maxWidth: '100%',
+        display: "inline-block",
+        color: "#000",
+        textDecoration: "underline",
+       
+
+    },
+    playstore: {
+        ...theme.img,
+        borderRadius: "8px",
+    },
+
+
+    asideMain: {
+        position: 'relative',
+        display: "flex",
+        height: "400px",
+        marginRight: "auto",
+        marginLeft:"auto",
+        paddingRight: "5%",
+        paddingLeft: "5%",
+        WebkitBoxPack: "center",
+        justifyContent: "center",
+        WebkitBoxAlign: "center",
+        alignItems: "center",
+        borderTop:  "1px none #e7e7e7",
+        borderBottom: "1px none #e7e7e7",
+        backgroundColor: "rgba(0,0,0,.6)",
+        backgroundImage: `linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.6)), url("https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68d56dbee2b91f0cf850cc_5eb970f9a06b611c76bb4e43_Frame%2046457%20(1)%20(1).jpg")`,
+        backgroundPosition: "0 0, 0 50%",
+        opacity: 1,
+
+    }, 
+    asideContainer: {
+        display: "flex",
+        height: "100%",
+        maxWidth: "1200px",
+        WebkitBoxOrient: "vertical",
+        WebKitBoxDirection: "normal",
+        flexDirection: "column",
+        justifyContent: "center",
+        WebkitBoxAlign: "center",
+        alignItems: "center",
+        webkitBoxFlex: 1,
+        flex: 1
+    }, 
+    asideBlock: {
+        display: "block",
+        alignSelf: "center",
+        webkitBoxOrdinalGroup: 1,
+        order: 0,
+        textAlign: "center",
+    }, 
+    asideh2: {
+        ...theme.typography.h2,
+        display: "flex",
+        WebkitBoxPack: "center",
+        justifyContent: "center",
+        color: "#fff",
+        textAlign: "center",
+        marginTop: 0,
+        fontSize: "38px",
+        fontWeight: 700,
+        lineHeight: 1.2,
+        marginBottom: "16px",
+    },
+    asideparagraph: {
+        color: "#fff",
+        textAlign: "center",
+        marginBottom: "16px",
+        fontSize: "18px",
+        lineHeight: 1.6,
+        marginTop: 0
+    },
+    asideTextBlock: {
+        marginTop: "10px",
+        color: "#fff",
+        textAlign: "center"
+        
+    }, 
+
     
     
 
@@ -410,6 +535,7 @@ const useStyles = makeStyles((theme)=>({
 const Home = () => {
     const classes = useStyles();
     return (
+      <React.Fragment>
         <div className={classes.root}>
             <Container fixed>
             <Grid
@@ -561,7 +687,7 @@ const Home = () => {
                 </Grid>
 
                      {/* Section 3 */}
-                     <div className={classes.margin}></div>
+                <div className={classes.margin}></div>
                 <Grid
                     container
                     direction="row"
@@ -696,8 +822,119 @@ const Home = () => {
                     </Grid>
 
                      {/* Section -4 */}
+
+
+
+                     {/* section -5 */}
+                     <div className={classes.margin}></div>
+                <Grid
+                    container
+                    direction="row"
+                    justify="flex-start"
+                    alignItems="flex-start"
+                    spacing={6}
+                    className={classes.sectionthree}
+                    >
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68d86031400479406f9f27_5f438dda1eaa0d1add983dec_img_firstmobilelms(2)%20(1).png" loading="lazy" alt="" className={classes.secthreeimage} />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.secthreegridtwo}>
+                            <Grid item xs={12}>
+                        <h2 className={classes.mainh2}>Topnotch mobile App with  <br></br>  <span className={classes.textspan3}>Your Brand </span>  <span><br/></span></h2>
+                        </Grid> 
+                        <Grid item xs={12}>
+                                    <p className={classes.lndParagraph}>A website is not enough anymore! Offer your workshops and courses on the go with an engaging mobile app for Android and iOS. Choose between Gurucan and your</p>
+                        </Grid>
+                           
+                            <Grid item container alignItems="flex-start" style={{marginBottom: "35px", height: "auto"}}>
+                                <Grid item xs={12}>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>Offline learning mode</p>
+                                    </div>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>Your brand's icon on the main screen</p>
+                                    </div>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>40% CTR with Push Notifications</p>
+                                    </div>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>One-click in-app purchases</p>
+                                    </div>
+                                    
+                                </Grid>
+                                <Grid item xs={12}>
+                                <a href="#" className={classes.readmorelink}>
+                                    <div className={classes.linktext}>
+                                        Read More &nbsp; <img src="https://image.flaticon.com/icons/png/512/25/25426.png" alt="" className={classes.linkarrow} />
+                                    </div>
+                                   
+                                </a>
+                            </Grid>
+                                
+                            </Grid>
+                            <Grid item xs={12}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justify="flex-start"
+                                        alignItems="flex-start"
+                                        spacing={2}
+                                        >
+                                            <Grid item >
+                                            <a href="#" target="_blank" className={classes.appbtnBlock}>
+                                                <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5eb00b05b41a945616c43698_aeroland-button-google-play-dark.jpg" loading="lazy" alt="" className={classes.playstore} />
+
+                                            </a>
+                                            </Grid>
+                                            <Grid item >
+                                            <a href="#" target="_blank" className={classes.appbtnBlock}>
+                                                <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5eb00b05b41a94becec4369a_aeroland-button-app-store-dark.jpg" loading="lazy" alt="" className={classes.playstore} />
+
+                                            </a>
+                                            </Grid>
+                                    </Grid>
+                            </Grid>
+                          
+                         
+                        </Grid>
+                        
+
+                    </Grid>
+
+                     {/* section -5 */}
                      </Container>
         </div>
+
+
+            <aside className={classes.asideMain}>
+                    <div className={classes.asideContainer}>
+                        <div className={classes.asideBlock}>
+                        <h2 className={classes.asideh2}>Ready to start?</h2>
+                        <p className={classes.asideparagraph}>Build your digital business today. Because you can!<br/></p>
+                        </div>
+
+                        <div className={classes.asidebtncontainer}>
+                                                              
+                                 <Button
+                                    variant="contained"
+                                    color="primary"
+                                    className={classes.lndButton}
+                                    >
+                                    START YOUR 7-day FREE&nbsp;TRIAL
+                                    </Button>
+                            <div className={classes.asideTextBlock}>
+                                    No credit card required.
+                            </div>
+                        </div>
+                    </div>
+        
+            </aside>
+
+            </React.Fragment>
 
     
     )
