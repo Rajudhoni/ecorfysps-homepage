@@ -11,7 +11,7 @@ import introimg from '../images/headerimg.png';
 
 
 const useStyles = makeStyles((theme)=>({
-    margin: {margin: theme.spacing(2)},
+    margin: {margin: theme.spacing(3)},
     root: {
         flexGrow: 1,
         display: "block",
@@ -478,6 +478,22 @@ const useStyles = makeStyles((theme)=>({
         opacity: 1,
 
     }, 
+
+    warningBadge: {
+        overflow: "visible",
+        paddingRight: "10px",
+        paddingLeft: "10px",
+        borderRadius: "20px",
+        backgroundColor: theme.palette.common.arcOrange,
+        fontFamily: [
+            'DM Sans',
+            'sans-serif',
+          ].join(','),
+        color: "#fff",
+        fontSize: "18px",
+        fontWeight: "400",
+        textDecoration: "none"
+    },
     asideContainer: {
         display: "flex",
         height: "100%",
@@ -675,10 +691,37 @@ const Home = () => {
                         <Grid item xs={12}>
                                 <h2 className={classes.headingsectwo}>5 reasons why creators <span><strong style={{color: "#f48522"}}> are switching </strong></span>to ECorfy</h2>
                         </Grid>
-                        <Grid item xs={12} fullWidth>
-                        <div  className={classes.embedvideo}>
-                        <iframe width="900" height="500" src="https://www.youtube.com/embed/nbRp-GcvWbQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+                        <Grid item xs={12} >
+                        <div  className={classes.embedvideo}
+              
+                        >
+                        <iframe 
+                            width="900" height="500" src="https://www.youtube.com/embed/nbRp-GcvWbQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay; encrypted-media"></iframe>
                         </div>
+{/* 
+                            <div
+                                    className={classes.embedvideo}
+                                    style={{
+                                    position: "relative",
+                                    paddingBottom: "56.25%" ,
+                                    paddingTop: 25,
+                                    height: 0
+                                    }}
+                                >
+                                    <iframe
+                                    style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: 0,
+                                        width: "100%",
+                                        height: "100%"
+                                    }}
+                                    src="https://www.youtube.com/embed/nbRp-GcvWbQ"
+                                    // src={`https://www.youtube.com/embed/${youtubeId}`}
+                                    frameBorder="0"
+                                    
+                                    />
+                                </div> */}
                         </Grid>
 
                     {/* Section 2 */}
@@ -751,8 +794,9 @@ const Home = () => {
                   
 
                     {/* Section 3 */}
-                    <div className={classes.margin}></div>
+                   
                      {/* Section -4 */}
+                     <div className={classes.margin}></div>
                      <Grid
                         container
                         direction="row"
@@ -906,6 +950,321 @@ const Home = () => {
                     </Grid>
 
                      {/* section -5 */}
+
+
+
+                     {/* section -6 */}
+
+                     
+                     <div className={classes.margin}></div>
+                     <Grid
+                        container
+                        direction="row"
+                        justify="flex-start"
+                        alignItems="flex-start"
+                        style={{marginBottom: "90px"}}
+                        >
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} >
+                                        <Grid
+                                            item
+                                        container
+                                        direction="row"
+                                        justify="flex-start"
+                                        alignItems="center"
+                                        style={{paddingTop: "40px"}}
+                                        >
+                                                            
+                                        
+
+                                            <h2 class={classes.sec4mainh2}><span className={classes.textspan3}>Powerful</span> Pipelines, Automations<br/>and Broadcasts <span className={classes.warningBadge}>beta</span><br/></h2>
+                                            
+                                            <Grid item xs={12}>
+                                                <div className={classes.mainreplaces}>
+                                                    Replaces: <br></br> &zwj;
+                                                </div>
+                                            </Grid>
+
+                            <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
+                                <Grid item >
+                                    <a href="#" className={classes.alternatecomp}>
+                                        <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4f47a894f665831122f4_clickfunnels-dark-logo.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                    </a>
+                                </Grid>
+                                <Grid item  style={{textAlign: "left" }}>
+                                <a href="#" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4f7e10578f538d1a0c10_mailchimp-logo-1.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                </a>
+                                </Grid>
+                                <Grid item style={{textAlign: "left"}}>
+                                <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4ff58dd6050d6c3378e0_convertkit-wordmark-1.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
+                                    </a>
+                                </Grid>
+                            
+                            </Grid>
+                            <Grid item xs={12}>
+                                    <p className={classes.lndParagraph}>Put your online business on autopilot! Send email campaigns, push notifications based on dozens of filters and triggers or automate routine course management tasks</p>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <a href="#" className={classes.readmorelink}>
+                                    <div className={classes.linktext}>
+                                        Read More &nbsp; <img src="https://image.flaticon.com/icons/png/512/25/25426.png" alt="" className={classes.linkarrow} />
+                                    </div>
+                                   
+                                </a>
+                            </Grid>
+                            
+
+                                                            
+                            </Grid>
+                        </Grid>
+
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} style={{padding: "10px"}}>
+                                <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68d8605342047685ff6754_5f3fd6019630b66479a0fc1e_img_marketingautomation(2)%20(1).png" alt="Landing page builder" title="Image of landing page builder" loading="lazy" className={classes.lndimg} />
+                                
+                            </Grid>
+                    
+                    
+                    </Grid>
+
+                    
+
+
+                     {/* section -6 */}
+                     <div className={classes.margin}></div>
+                     
+
+
+
+
+                                          {/* section -7 */}
+
+                     
+                                          <div className={classes.margin}></div>
+                     <Grid
+                        container
+                        direction="row"
+                        justify="flex-start"
+                        alignItems="flex-start"
+                       
+                        >
+
+
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} style={{padding: "10px"}}>
+                                <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68d861f7294c173389b672_5ef9e706db6c6c776386c092_img_webinars%20(1).png" alt="Landing page builder" title="Image of landing page builder" loading="lazy" className={classes.lndimg} />
+                                
+                            </Grid>
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} >
+                                        <Grid
+                                            item
+                                        container
+                                        direction="row"
+                                        justify="flex-start"
+                                        alignItems="center"
+                                        style={{paddingTop: "40px"}}
+                                        >
+                                                            
+                                        
+
+                                            <h2 class={classes.sec4mainh2}><span className={classes.textspan3}>Build-in </span>webinars with chats<br/></h2>
+                                            
+                                            <Grid item xs={12}>
+                                                <div className={classes.mainreplaces}>
+                                                Works with:<br></br> &zwj;
+                                                </div>
+                                            </Grid>
+
+                            <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
+                                <Grid item >
+                                    <a href="#" className={classes.alternatecomp}>
+                                        <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5ff6dcdabd24a30d6f058fa7_1A7A5379-AC05-4C12-819B-B2DA86F90651.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                    </a>
+                                </Grid>
+                                <Grid item  style={{textAlign: "left" }}>
+                                <a href="#" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5ff6dccebac2d5ae78503822_814BE775-96A3-4A3A-B1CE-6CD79228BF75-p-500.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                </a>
+                                </Grid>
+                                <Grid item style={{textAlign: "left"}}>
+                                <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4ff58dd6050d6c3378e0_convertkit-wordmark-1.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
+                                    </a>
+                                </Grid>
+                            
+                            </Grid>
+                            <Grid item xs={12}>
+                                    <p className={classes.lndParagraph}>Run one-to-many webinars with presentation, screen sharing, engaging chats, and promo buttons. Analyze view stats and use them for marketing and sales improvements.</p>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <a href="#" className={classes.readmorelink}>
+                                    <div className={classes.linktext}>
+                                        Read More &nbsp; <img src="https://image.flaticon.com/icons/png/512/25/25426.png" alt="" className={classes.linkarrow} />
+                                    </div>
+                                   
+                                </a>
+                            </Grid>
+                            
+
+                                                            
+                            </Grid>
+                        </Grid>
+
+                    
+                    
+                    </Grid>
+
+                    
+
+
+                     {/* section -7 */}
+                   
+                     
+
+                     {/* section -8  */}
+                                          
+                                          <div className={classes.margin}></div>
+                <Grid
+                    container
+                    direction="row"
+                    justify="flex-start"
+                    alignItems="flex-start"
+                    spacing={6}
+                    className={classes.sectionthree}
+                    >
+
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.secthreegridtwo}>
+                            <Grid item xs={12}>
+
+                        <h2 className={classes.mainh2}><span className={classes.textspan3}><strong>Fort Knox</strong></span> level protection <br/>of your content and data <span className={classes.warningBadge}>beta</span><br/></h2>
+                        </Grid> 
+                        <Grid item xs={12}>
+                                    <p className={classes.lndParagraph}>A website is not enough anymore! Offer your workshops and courses on the go with an engaging mobile app for Android and iOS. Choose between Gurucan and your</p>
+                        </Grid>
+                           
+                            <Grid item container alignItems="flex-start" style={{marginBottom: "35px", height: "auto"}}>
+                                <Grid item xs={12}>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>Offline learning mode</p>
+                                    </div>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>Your brand's icon on the main screen</p>
+                                    </div>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>40% CTR with Push Notifications</p>
+                                    </div>
+                                    <div className={classes.sec5check} >
+                                        <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa30c0d89a76c_check-circle.svg" width="24" alt="checkicon" className={classes.checkIcon} />
+                                        <p className={classes.checkText}>One-click in-app purchases</p>
+                                    </div>
+                                    
+                                </Grid>
+                                <Grid item xs={12}>
+                                <a href="#" className={classes.readmorelink}>
+                                    <div className={classes.linktext}>
+                                        Read More &nbsp; <img src="https://image.flaticon.com/icons/png/512/25/25426.png" alt="" className={classes.linkarrow} />
+                                    </div>
+                                   
+                                </a>
+                            </Grid>
+                                
+                            </Grid>
+                          
+                          
+                         
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68d8621cbb04268dfda1a4_5f63290a14e9d5448a4ec67a_img_securevideo%20(1).png" loading="lazy" alt="" className={classes.secthreeimage} />
+                        </Grid>
+                        
+
+                    </Grid>
+
+                   
+
+
+
+                     {/* section -8 */}
+
+
+
+                     {/* Section - 9 */}
+
+                     <div className={classes.margin}></div>
+                     <Grid
+                        container
+                        direction="row"
+                        justify="flex-start"
+                        alignItems="flex-start"
+                        spacing={3}
+                        style={{marginBottom: "58px"}}
+                        >
+
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} style={{padding: "10px"}}>
+                                <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f68d860de36ebd6b2101d00_5f438db8331902a4595874d0_img_crm(2)%20(1).png" alt="Landing page builder" title="Image of landing page builder" loading="lazy" className={classes.lndimg} />
+                                
+                            </Grid>
+                            <Grid item item xs={12} sm={12} md={6} lg={6} xl={6} >
+                                        <Grid
+                                            item
+                                        container
+                                        direction="row"
+                                        justify="flex-start"
+                                        alignItems="center"
+                                        // style={{paddingTop: "40px"}}
+                                        >
+                                                            
+                                        
+                                            
+                                            <h2 class={classes.sec4mainh2}><span className={classes.textspan3}>Insightful</span> and detailed<br/>Analytics &amp; CRM</h2>
+                                            
+                                            <Grid item xs={12}>
+                                                <div className={classes.mainreplaces}>
+                                                    Replaces: <br></br> &zwj;
+                                                </div>
+                                            </Grid>
+
+                            <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
+                                <Grid item >
+                                    <a href="#" className={classes.alternatecomp}>
+                                        <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3cd3ab49bf9b6bb4f20285_fJQPxaxKQHemF3r4OGfP-p-500.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                    </a>
+                                </Grid>
+                                <Grid item  style={{textAlign: "left" }}>
+                                <a href="#" className={classes.alternatecomp}>
+                                    <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3cd380bb63d978ed43f42c_output-onlinepngtools-p-500.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
+                                </a>
+                                </Grid>
+                             
+                            
+                            </Grid>
+                            <Grid item xs={12}>
+                                    <p className={classes.lndParagraph}>Even the best product needs an engaging storefront. Build your responsive, converting landing pages with just a few clicks.</p>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <a href="#" className={classes.readmorelink}>
+                                    <div className={classes.linktext}>
+                                        Read More &nbsp; <img src="https://image.flaticon.com/icons/png/512/25/25426.png" alt="" className={classes.linkarrow} />
+                                    </div>
+                                   
+                                </a>
+                            </Grid>
+                            
+
+                                                            
+                            </Grid>
+                        </Grid>
+
+
+                    
+                    
+                    </Grid>
+
+                    
+
+                     {/* Section - 9 */}
                      </Container>
         </div>
 

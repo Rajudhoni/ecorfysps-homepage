@@ -142,7 +142,9 @@ const useStyles = makeStyles((theme) => ({
     height: "50px"
   }, 
   drawer: {
-    backgroundColor: theme.palette.common.arcBlue, 
+    backgroundColor: theme.palette.common.arcBlue,
+    top: "100px",
+    zIndex: 1300 
   },
   drawerItem: {
     ...theme.typography.tab,
@@ -157,7 +159,7 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     
     backgroundColor: theme.palette.common.white,
-    zIndex:  1000,
+    zIndex:  1301,
     boxShadow: "14px 14px 40px 0 rgb(118 126 173 / 8%)"
   },
   toolbar: {
@@ -400,7 +402,7 @@ const Header = () => {
                     classes={{paper: classes.drawer}}
                     anchor="top"
         >
-            <div className={classes.toolbarMargin} />
+            
                         <List disablePadding>
                         <ListItem divider component={Link} to="/" 
                                   onClick={()=> {setOpenDrawer(false); setValue(0)}}
