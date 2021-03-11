@@ -130,18 +130,32 @@ const useStyles = makeStyles((theme)=>({
         alignSelf: "auto",
         borderRadius: "10px",
         backgroundColor: "transparent"
-    }, 
+    },
     lndButton: {
         ...theme.typography.estimate,
     borderRadius: "50px",
     marginRight: 0,
     marginLeft: 0,
-    [theme.breakpoints.down("xs")]:{
-        marginLeft: "10px",
+    // [theme.breakpoints.down("xs")]:{
+    //     marginLeft: "10px",
+        
+    // },
+   
+  
+    ['@media (max-width:375px)']:{
+        marginLeft: "20px"
     },
-    [theme.breakpoints.down("md")]:{
-        marginLeft: "30px",
+    ['@media (min-width:425px)']:{
+        marginLeft: "60px"
     },
+    ['@media (min-width:768px)']:{
+        marginLeft: 0,
+    },
+    ['@media (max-width:1024px)']:{
+        marginLeft: 0,
+       
+    },
+
 
     minHeight: "45px",
     minWidth: "140px",
@@ -167,7 +181,48 @@ const useStyles = makeStyles((theme)=>({
     boxShadow: 'none',
 
     transition: "all 350ms ease",
-    }, 
+    },  
+    // lndButton: {
+    //     ...theme.typography.estimate,
+    // borderRadius: "50px",
+    // marginRight: 0,
+    // marginLeft: 0,
+    // [theme.breakpoints.down("xs")]:{
+    //     marginLeft: "10px",
+        
+    // },
+    // ['@media (min-width:375px)']:{
+    //     marginLeft: "0px"
+    // },
+    // ['@media (min-width:425px)']:{
+    //     marginLeft: "60px"
+    // },
+    // minHeight: "45px",
+    // minWidth: "140px",
+    // marginTop: 0,
+    // paddingTop: "16px",
+    // paddingRight: "40px",
+    // paddingBottom: "16px",
+    // paddingLeft: "40px",
+    // flexDirection: "row",
+    // justifyContent:"center",
+    // alignItems: 'center',
+    // alignSelf: "center",
+
+    // lineHeight: "12px",
+    // [theme.breakpoints.down("md")]: {
+    //     lineHeight:  "10px"
+    //   },
+    // fontSize: "12px",
+    // fontWeight: "600",
+    // letterSpacing: "1px",
+    // textTransform: "upppercase",
+    // cursor: "pointer",
+    // boxShadow: 'none',
+
+    // transition: "all 350ms ease",
+    // }, 
+    // 
     noCard: {
        
         marginTop: "5px",
@@ -646,7 +701,7 @@ const Home = () => {
                             
                             </Grid>
                         </Grid>
-                        <Grid item container alignItems="center">
+                        <Grid item container >
                         <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
                                 
                                   
