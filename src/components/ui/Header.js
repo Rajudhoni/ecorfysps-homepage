@@ -114,6 +114,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "0px",
   },
   menuItem: {
+    marginTop: "20px",
     opacity: 0.7,
     "&:hover": {
       opacity: 1,
