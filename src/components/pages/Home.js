@@ -6,7 +6,8 @@ import Container from '@material-ui/core/Container';
 import clsx from  'clsx';
 import Button from "@material-ui/core/Button";
 import introimg from '../images/headerimg.png';
-
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import {useTheme} from "@material-ui/core/styles";
 
 
 
@@ -39,6 +40,10 @@ const useStyles = makeStyles((theme)=>({
         color: "#0a1f44",
         fontSize:"57px",
         lineHeight: "58px",
+        [theme.breakpoints.down("md")]:{
+            fontSize: "30px",
+            lineHeight: "44px"
+        },
         fontWeight: "bold",
         letterSpacing: "-.3px"
     },
@@ -73,6 +78,9 @@ const useStyles = makeStyles((theme)=>({
         ...theme.typography.body,
          fontStyle: "italic",
          textAlign: "left",
+         [theme.breakpoints.down("sm")]:{
+            textAlign: 'center'
+        },
          color: theme.palette.common.arcOrange,
 
     },
@@ -102,7 +110,11 @@ const useStyles = makeStyles((theme)=>({
 
     }, 
     gridMargin: {
+        
         marginBottom: "38px",
+        [theme.breakpoints.down("sm")]:{
+            textAlign: 'center'
+        }
     },
 
     lndButtonWrap: {
@@ -124,6 +136,12 @@ const useStyles = makeStyles((theme)=>({
     borderRadius: "50px",
     marginRight: 0,
     marginLeft: 0,
+    [theme.breakpoints.down("xs")]:{
+        marginLeft: "10px",
+    },
+    [theme.breakpoints.down("md")]:{
+        marginLeft: "30px",
+    },
 
     minHeight: "45px",
     minWidth: "140px",
@@ -165,8 +183,8 @@ const useStyles = makeStyles((theme)=>({
         minWidth: "10px",
         marginRight: "10px",
         marginLeft: 0,
-        [theme.breakpoints.down("xs")]: {
-            marginLeft: "10px"
+        [theme.breakpoints.down("md")]: {
+            marginLeft: "90px"
           },
         paddingTop: "16px",
         paddingRight: "30px",
@@ -254,13 +272,19 @@ const useStyles = makeStyles((theme)=>({
         marginLeft: "auto",
         marginRight: "auto",
         marginTop: "20px",
-        maxWidth: "940px",
+        // maxWidth: "940px",
     },
     headingsectwo: {
         fontFamily: 'Ramabhadra, sans-serif',
         marginTop: "24px",
         marginBottom: "16px",
-        fontSize: "40px",
+        fontSize: "48px",
+        [theme.breakpoints.down("md")]: {
+            fontSize: "38px"
+           },
+        [theme.breakpoints.down("sm")]: {
+           fontSize: "24px"
+          },
         lineHeight: 1.2,
         fontWeight: 700,
     },
@@ -540,7 +564,9 @@ const useStyles = makeStyles((theme)=>({
         color: "#fff",
         textAlign: "center"
         
-    }, 
+    },
+    
+    
 
     
     
@@ -550,6 +576,9 @@ const useStyles = makeStyles((theme)=>({
 }))
 const Home = () => {
     const classes = useStyles();
+    const theme = useTheme();
+    const matches = useMediaQuery('(min-width:375px)');
+    
     return (
       <React.Fragment>
         <div className={classes.root}>
@@ -575,7 +604,7 @@ const Home = () => {
                             </Grid>
                         </Grid>
                         <Grid item container  className={classes.gridMargin}>
-                            <Grid xs={4}> 
+                            <Grid xs={12} sm={4} md={4} lg={4} xl={4}> 
                                 <div className={clsx(classes.stars, classes.img)}>
                                 <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa3e42189a82c_stars.svg" alt="" className={classes.star} />
                                 <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa3e42189a82c_stars.svg" alt="" className={classes.star} />
@@ -588,7 +617,7 @@ const Home = () => {
                                 </div>
                             
                             </Grid>
-                            <Grid xs={4}> 
+                            <Grid xs={12} sm={4} md={4} lg={4} xl={4}> 
                             
                             <div className={clsx(classes.stars, classes.img)}>
                                 <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa3e42189a82c_stars.svg" alt="" className={classes.star} />
@@ -602,7 +631,7 @@ const Home = () => {
                                 </div>
                             
                             </Grid>
-                            <Grid xs={4}> 
+                            <Grid xs={12} sm={4} md={4} lg={4} xl={4}> 
                             
                             <div className={clsx(classes.stars, classes.img)}>
                                 <img src="https://uploads-ssl.webflow.com/5eafe01d00e6c62ec4f77d51/5eafe01d455aa3e42189a82c_stars.svg" alt="" className={classes.star} />
@@ -617,21 +646,22 @@ const Home = () => {
                             
                             </Grid>
                         </Grid>
-                        <Grid item container>
-                        <Grid item xs={6}>
+                        <Grid item container alignItems="center">
+                        <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
                                 
                                   
                                     <Button
                                     variant="contained"
                                     color="primary"
                                     className={classes.lndButton}
+                                    
                                     >
                                     START YOUR 7-day FREE&nbsp;TRIAL
                                     </Button>
                                     <div className={classes.noCard}>No credit card required</div>
                                 
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
                                 <div className={classes.btnexplr}>
                               
                                   <a href="#" className={classes.lndButtonExplore}>BOOK A demo</a>
@@ -661,18 +691,18 @@ const Home = () => {
                     alignItems="center"
                     >
                         <Grid item container xs={12} className={classes.logowrap}>
-                        <Grid item xs={3} className={classes.clogo}>
+                        <Grid item xs={6} sm={6} md={3} lg={3} xl={3} className={classes.clogo}>
                                 <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f37d7754102a719bb31f6fe_500startups.jpg" width="200" sizes="(max-width: 479px) 45vw, (max-width: 767px) 130px, (max-width: 991px) 14vw, 130px"  className={classes.cimage}/>
                         </Grid>
-                        <Grid item xs={3}  className={classes.clogo}>
+                        <Grid item xs={6} sm={6} md={3} lg={3} xl={3}  className={classes.clogo}>
                            <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f37d78620d3a221df4dc713_Y_Combinator_logo_text_wordmark-p-500.png" width="200" sizes="(max-width: 479px) 45vw, (max-width: 767px) 130px, (max-width: 991px) 14vw, 130px"  className={classes.cimage}/>
 
                         </Grid>
-                        <Grid item xs={3}  className={classes.clogo}>
+                        <Grid item xs={6} sm={6} md={3} lg={3} xl={3}  className={classes.clogo}>
                         <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f37db727c03d786b96c3ea2_gitex_logo_png-p-500.png"  width="200" sizes="(max-width: 479px) 45vw, (max-width: 767px) 130px, (max-width: 991px) 14vw, 130px" className={classes.cimage}/>
 
                         </Grid>
-                        <Grid item xs={3}  className={classes.clogo}>
+                        <Grid item xs={6} sm={6} md={3} lg={3} xl={3}  className={classes.clogo}>
                         <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f37dbabc3b70c92b5c0ffcf_Web-Summit_Logo-Colour-p-1600.jpeg" width="200" sizes="(max-width: 479px) 45vw, (max-width: 767px) 130px, (max-width: 991px) 14vw, 130px" className={classes.cimage}/>
 
                         </Grid>
@@ -691,37 +721,18 @@ const Home = () => {
                         <Grid item xs={12}>
                                 <h2 className={classes.headingsectwo}>5 reasons why creators <span><strong style={{color: "#f48522"}}> are switching </strong></span>to ECorfy</h2>
                         </Grid>
-                        <Grid item xs={12} >
-                        <div  className={classes.embedvideo}
-              
-                        >
+                        <Grid item xs={12} style={{width:'100%',height:"300px"}} >
                         <iframe 
-                            width="900" height="500" src="https://www.youtube.com/embed/nbRp-GcvWbQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-                        </div>
-{/* 
-                            <div
-                                    className={classes.embedvideo}
-                                    style={{
-                                    position: "relative",
-                                    paddingBottom: "56.25%" ,
-                                    paddingTop: 25,
-                                    height: 0
-                                    }}
-                                >
-                                    <iframe
-                                    style={{
-                                        position: "absolute",
-                                        top: 0,
-                                        left: 0,
-                                        width: "100%",
-                                        height: "100%"
-                                    }}
-                                    src="https://www.youtube.com/embed/nbRp-GcvWbQ"
-                                    // src={`https://www.youtube.com/embed/${youtubeId}`}
-                                    frameBorder="0"
-                                    
-                                    />
-                                </div> */}
+                        style={{height:"100%",width:"100%"}}
+                         src="https://www.youtube.com/embed/nbRp-GcvWbQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="autoplay; encrypted-media">
+                        </iframe>
+                        {/* <ReactPlayer
+                            url='https://www.youtube.com/embed/nbRp-GcvWbQ'
+                            // width="100%"
+                            // height="500px"
+                            style={{width:'0px'}}
+                        /> */}
+                        
                         </Grid>
 
                     {/* Section 2 */}
@@ -751,18 +762,18 @@ const Home = () => {
                                     Replaces: <br></br> &zwj;
                                 </div>
                             </Grid>
-                            <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
-                                <Grid item >
+                            <Grid item xs={12} container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
+                                <Grid item xs={4}>
                                     <a href="#" className={classes.alternatecomp}>
                                         <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3bea7efda3cf13c2294155_Teachable-logo-green.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                     </a>
                                 </Grid>
-                                <Grid item  style={{textAlign: "left" }}>
+                                <Grid item xs={4} style={{textAlign: "left" }}>
                                 <a href="#" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3be9c87450d7433c943f8b_kajabi-logo-wide.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                 </a>
                                 </Grid>
-                                <Grid item style={{textAlign: "left"}}>
+                                <Grid item xs={4} style={{textAlign: "left"}}>
                                 <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c0318d4c09faf4bfbac6a_Logo_Grey_Small.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
                                     </a>
@@ -796,7 +807,7 @@ const Home = () => {
                     {/* Section 3 */}
                    
                      {/* Section -4 */}
-                     <div className={classes.margin}></div>
+                    
                      <Grid
                         container
                         direction="row"
@@ -822,18 +833,18 @@ const Home = () => {
                                                 </div>
                                             </Grid>
 
-                            <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
-                                <Grid item >
+                            <Grid item xs={12} container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
+                                <Grid item xs={4} >
                                     <a href="#" className={classes.alternatecomp}>
                                         <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c06c06fb244ee8e45bbdf_webflow.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                     </a>
                                 </Grid>
-                                <Grid item  style={{textAlign: "left" }}>
+                                <Grid item xs={4} style={{textAlign: "left" }}>
                                 <a href="#" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c06d6ff3ba5bf60da119a_1200px-Wix.com_website_logo.svg.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                 </a>
                                 </Grid>
-                                <Grid item style={{textAlign: "left"}}>
+                                <Grid item xs={4} style={{textAlign: "left"}}>
                                 <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c0755bd17cecaa03262f0_instapage-logo-3.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
                                     </a>
@@ -955,8 +966,8 @@ const Home = () => {
 
                      {/* section -6 */}
 
-                     
-                     <div className={classes.margin}></div>
+{/*                      
+                     <div className={classes.margin}></div> */}
                      <Grid
                         container
                         direction="row"
@@ -973,8 +984,6 @@ const Home = () => {
                                         alignItems="center"
                                         style={{paddingTop: "40px"}}
                                         >
-                                                            
-                                        
 
                                             <h2 class={classes.sec4mainh2}><span className={classes.textspan3}>Powerful</span> Pipelines, Automations<br/>and Broadcasts <span className={classes.warningBadge}>beta</span><br/></h2>
                                             
@@ -985,17 +994,17 @@ const Home = () => {
                                             </Grid>
 
                             <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
-                                <Grid item >
+                                <Grid item xs={4}>
                                     <a href="#" className={classes.alternatecomp}>
                                         <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4f47a894f665831122f4_clickfunnels-dark-logo.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                     </a>
                                 </Grid>
-                                <Grid item  style={{textAlign: "left" }}>
+                                <Grid item xs={4} style={{textAlign: "left" }}>
                                 <a href="#" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4f7e10578f538d1a0c10_mailchimp-logo-1.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                 </a>
                                 </Grid>
-                                <Grid item style={{textAlign: "left"}}>
+                                <Grid item xs={4} style={{textAlign: "left"}}>
                                 <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4ff58dd6050d6c3378e0_convertkit-wordmark-1.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
                                     </a>
@@ -1075,17 +1084,17 @@ const Home = () => {
                                             </Grid>
 
                             <Grid item container   alignItems="center"  style={{marginBottom: "15px", display: "flex", }}>
-                                <Grid item >
+                                <Grid item xs={4}>
                                     <a href="#" className={classes.alternatecomp}>
                                         <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5ff6dcdabd24a30d6f058fa7_1A7A5379-AC05-4C12-819B-B2DA86F90651.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                     </a>
                                 </Grid>
-                                <Grid item  style={{textAlign: "left" }}>
+                                <Grid item xs={4} style={{textAlign: "left" }}>
                                 <a href="#" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5ff6dccebac2d5ae78503822_814BE775-96A3-4A3A-B1CE-6CD79228BF75-p-500.png" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo}/>
                                 </a>
                                 </Grid>
-                                <Grid item style={{textAlign: "left"}}>
+                                <Grid item xs={4} style={{textAlign: "left"}}>
                                 <a href="/comparison/better-thinkific-alternative" className={classes.alternatecomp}>
                                     <img src="https://uploads-ssl.webflow.com/5ea9738f536b87619aaf9851/5f3c4ff58dd6050d6c3378e0_convertkit-wordmark-1.svg" width="100" loading="lazy" alt="complogo" className={classes.mainreplacelogo} />
                                     </a>

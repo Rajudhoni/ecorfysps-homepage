@@ -20,6 +20,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { findByLabelText } from "@testing-library/react";
+import Container from '@material-ui/core/Container';
 
 
 
@@ -122,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.tab,
   },
   drawerIconContainer: {
-    marginLeft: "auto", 
+    // marginLeft: "auto", 
     "&:hover": {
       backgroundColor: "transparent"
     }
@@ -134,17 +135,17 @@ const useStyles = makeStyles((theme) => ({
       left: "50rem",
     },
     [theme.breakpoints.down("xs")]: {
-        left:  "10rem"
+        left:  "22rem"
     }
 
   }, 
   drawerIcon: {
-    width: "50px", 
-    height: "50px"
+    width: "40px", 
+    height: "40px"
   }, 
   drawer: {
     backgroundColor: theme.palette.common.arcBlue,
-    top: "100px",
+    top: "90px",
     zIndex: 1300 
   },
   drawerItem: {
@@ -152,13 +153,15 @@ const useStyles = makeStyles((theme) => ({
     color: "white"
   },
   drawerItemEstimate: {
-    backgroundColor: theme.palette.common.arcOrange
+    backgroundColor: theme.palette.common.arcOrange,
+    borderRadius: "50px",
+    textAlign:"center"
   }, 
   drawerItemSelected: {
     opacity: 1
   }, 
   appbar: {
-    
+  
     backgroundColor: theme.palette.common.white,
     zIndex:  1301,
     boxShadow: "14px 14px 40px 0 rgb(118 126 173 / 8%)"
@@ -172,6 +175,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     maxWidth: "1150px",
+    
     // justifyContent: "center",
     // alignItems: "center",
   }, 
@@ -445,7 +449,7 @@ const Header = () => {
                             </ListItem>   
                         </List>
                     </SwipeableDrawer>
-                    <div className={classes.navRightbtn}>
+                    {/* <div className={classes.navRightbtn}>
               
                       <a href="#" className={classes.headersignin} >Sign in</a>
                       <Button
@@ -459,8 +463,10 @@ const Header = () => {
                         START NOW
                       </Button>
                     
-                      </div>
+                      </div> */}
+                     <a href="#" style={{marginLeft: "auto"}} className={classes.headersignin} >Sign in</a>
                     <IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
+                    
                       <MenuIcon className={classes.drawerIcon}/>
                     </IconButton>
      </React.Fragment>
@@ -468,6 +474,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <ElevationScroll>
+      
         <AppBar  position="fixed"  className={classes.appbar}>
           <Toolbar disableGutters classes={{root: classes.toolbar}} >
             <Button
@@ -483,6 +490,7 @@ const Header = () => {
             
           </Toolbar>
         </AppBar>
+     
       </ElevationScroll>
       <div className={classes.toolbarMargin} />
     </React.Fragment>
